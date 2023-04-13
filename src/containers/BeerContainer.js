@@ -12,7 +12,7 @@ const BeerContainer = () => {
 
   useEffect(() => {
     loadBeers()
-  }, [])
+  }, [selectedFavourite])
 
 
   const loadBeers = function(){
@@ -27,12 +27,10 @@ const BeerContainer = () => {
   } 
 
 const handleFavourite = function(beer) {
-  // [...selectedFavourite, ]
-  const selectedFavouriteCopy = [...selectedFavourite]
-  selectedFavouriteCopy.push(beer)
-  setSelectedFavourite(selectedFavouriteCopy)
+  setSelectedFavourite([...selectedFavourite, beer])
 }
 
+console.log(selectedFavourite)
   // function to handle select favourite
 
   return (

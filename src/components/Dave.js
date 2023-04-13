@@ -1,10 +1,10 @@
 import React from "react";
 
-const Dave = (selectedFavourite) => {
+const Dave = ({selectedFavourite}) => {
     console.log(selectedFavourite)
     const favList = selectedFavourite.map((beer) => {
         console.log(beer)
-        return <>beer.name</>
+        return <>{beer.name}</>
     })
 
   return ( 
