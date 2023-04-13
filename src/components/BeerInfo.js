@@ -1,11 +1,12 @@
 import React from "react";
 
-const BeerInfo = ({beer}) => {
+const BeerInfo = ({beer, handleFavourite}) => {
   return ( 
     <div>
-      <p>{beer.name}</p>
-      <p>{beer.description}</p>
-      <p>{beer.abv}</p>
+      <p>Name: {beer.name}</p>
+      <p>Description: {beer.description}</p>
+      <p>ABV: {beer.abv}%</p>
+      <button onClick={handleFavourite}>FAVE ME DADDY</button>
     </div>
    );
 }
