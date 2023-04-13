@@ -1,10 +1,10 @@
 import React from "react";
 import Beer from "./Beer";
 
-const BeerList = ({beers}) => {
+const BeerList = ({beers, onBeerSelect}) => {
 
   const beerItems = beers.map((beer, index) => {
-    return <Beer beer={beer} key={index} />})
+    return <Beer beer={beer} key={index} onBeerSelect={onBeerSelect}/>})
 
  
 
